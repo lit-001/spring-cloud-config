@@ -1,0 +1,20 @@
+server:
+  port: 8888 #默认端口
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  application:
+    name: spring-cloud-service-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lit-001/test.git  #git文件地址
+          default-label: main
+#          search-paths: respo #注意搜索文件夹，没有默认根目录
+          username: 447165715@qq.com  		 #Github账号
+          password: li18638061421tao		#GitHub账号密码
